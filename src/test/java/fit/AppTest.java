@@ -71,7 +71,7 @@ public class AppTest {
 
         //same size (due to parameters sent to random method)
         assertEquals(attendanceListResult.size(), attendanceListResult.size());
-
+        
         //same percentile of 'true' values due to parameters sent to random method
         assertEquals(
             countTrueInList(attendanceListExpected.values()),
