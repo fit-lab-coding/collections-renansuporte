@@ -9,11 +9,15 @@ public class AttendanceHelper {
 
 		Map<String, Boolean> map = new HashMap<>();
 		
-		int bool = numeroPessoas * percentualPessoasPresente / 100;
+		int resultado = calculatePercentual(numeroPessoas, percentualPessoasPresente);
 		for(int i = 0; i < numeroPessoas; i++) {
-			map.put("test "+i, i < bool ? true: false);
+			map.put("test "+i, i < resultado);
 		}
 		return map;
+	}
+
+	private static int calculatePercentual(int numeroPessoas, int percentualPessoasPresente) {
+		return numeroPessoas * percentualPessoasPresente / 100;
 	}
 
 }
