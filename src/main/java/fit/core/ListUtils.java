@@ -6,7 +6,7 @@ import java.util.List;
 
 public class ListUtils {
 
-	public static List<String> sort(List<String> names, Comparator<String> comp) {
+	public static <T> List<T> sort(List<T> names, Comparator<T> comp) {
 		Collections.sort(names, comp);
 		return names;
 	}
